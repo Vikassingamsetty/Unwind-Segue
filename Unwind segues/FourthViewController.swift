@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FourthViewController.swift
 //  Unwind segues
 //
 //  Created by vikas on 19/10/20.
@@ -8,22 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var labelTX: UILabel!
-    
+class FourthViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func firstVCBtn(_ sender: Any) {
-        
-        let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
+    
+    @IBAction func fourthVCBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "FifthViewController") as! FifthViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func unwindFirstSegue(_ sender:UIStoryboardSegue){}
-    
 }
-
